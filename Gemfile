@@ -68,3 +68,4 @@ gem 'mysql2'
 gem 'jquery-rails'
 
 gem 'dotenv-rails'
+gem 'grape'
