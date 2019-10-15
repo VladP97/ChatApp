@@ -1,0 +1,5 @@
+<h1>Page#index</h1>
+<% @rooms.each do |room| %>
+  <a href="<%= room_path(room[:id]) %>"><%= room[:name] %></a>
+  <br>
+<% end %>

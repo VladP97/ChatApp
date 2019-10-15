@@ -1,0 +1,33 @@
+<h1 room-id="<%= params[:id] %>"><%= @room.name %></h1>
+
+<div id="messages">
+  <% @messages.each do |message| %>
+    <div>
+      <p>
+        <%= message.text %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<input type="text" id="message-input">
+<input type="button" value="Send message" id="button">
+
+<script>
+  $("#button").click(function() {
+      let message = $("#message-input").val();
+      let roomId = $("h1").attr('room-id');
+      $.ajax({
+          type: "POST",
+          url: "/messages",
+          data: {
+              text: message,
+              room_id: roomId
+          },
+          success: function(msg){
+
+          }
+      });
+      $('#message-input').val("");
+  });
+</script>
