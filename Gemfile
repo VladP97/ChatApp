@@ -69,3 +69,6 @@ gem 'jquery-rails'
 
 gem 'dotenv-rails'
 gem 'grape'
+
+gem 'rack-cors', :require => 'rack/cors'
+

@@ -1,5 +1,5 @@
 class RoomChannel < ApplicationCable::Channel
-  def subscribed
+  def subscribed  
     stream_for room
   end
 
